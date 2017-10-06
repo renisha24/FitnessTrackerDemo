@@ -3,9 +3,16 @@ package com.fit.track.model;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 @Entity
 public class Activity {
-
+	private  @Id @GeneratedValue int USERID;
+	private String ACTIVITYTYPE;
+	private int GOAL;
+	private Date DATE;
+	private int ACHIEVED;
+	
 	public int getUSERID() {
 		return USERID;
 	}
@@ -36,11 +43,6 @@ public class Activity {
 	public void setACHIEVED(int aCHIEVED) {
 		ACHIEVED = aCHIEVED;
 	}
-	int USERID;
-	String ACTIVITYTYPE;
-	int GOAL;
-	Date DATE;
-	int ACHIEVED;
 	
 	
 }
